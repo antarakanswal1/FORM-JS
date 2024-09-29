@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORM</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="row poppins-light">
+      <div class="col-5 ps-5">
+        <div class="mb-5 mt-5">
+            <h1 style="text-decoration: underline;">Form To Fill</h1>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Name :</label>
+          <input type="text" class="form-control" id="name" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >E-mail :</label
+          >
+          <input type="text" class="form-control" id="email" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Phone :</label
+          >
+          <input type="number" class="form-control" id="phone" />
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom04" class="form-label"
+            >Qualification :</label
+          >
+          <input type="text" class="form-control" id="quali" />
+          
+        </div>
+        <div class="mb-3">
+          <label for="validationCustom04" class="form-label"
+            >Class 10th Board / Year of Passing :</label
+          >
+          <input type="text" class="form-control" id="tenth" />
+        </div>
+        <div class="mb-3">
+          <label for="validationCustom04" class="form-label"
+            >Class 12th Board / Year of Passing :</label
+          >
+          <input type="text" class="form-control" id="twelth" />
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">University :</label>
+            <input type="text" class="form-control" id="university" />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Course :</label>
+            <input type="text" class="form-control" id="course" />
+          </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Skills :</label
+          >
+          <input type="text" class="form-control" id="skills" />
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Experience :</label
+            >
+            <input type="text" class="form-control" id="experience" />
+          </div>
+          <div class="mb-3">
+            <button type="button" class="btn btn-primary" onclick="formm()">Submit</button>
+          </div>
+      </div>
+      <div class="col-7 resume-font ps-5">
+        <div class="mb-5 mt-5 ps-5">
+          <h1 style="text-decoration: underline;text-decoration-thickness: 4px;" id="res"></h1>
+        </div>
+        <div><h3 id="pers"></h3></div>
+        <div class="mb-3"><p id="namee"></p></div>
+        <div class="mb-3"><p id="emai"></p></div>
+        <div class="mb-3"><p id="phonee"></p></div>
+        <div><h3 id="stre"></h3></div>
+        <div><p id="stre-pera"></p></div>
+       <div><h3 id="academics"></h3></div>
+       <div><p id="academics-pera"></p></div>
+      <div><h3 id="technical-skills"></h3></div>
+      <div><p id="ski"></p></div>
+      <div><h3 id="work-experience"></h3></div>
+      <div class="mb-3"><span id="exp"></span></div>
+      <div><h3 id="career-objective"></h3></div>
+      <div><p id="career-obj-text"></p></div>
+      <div><h3 id="declaration"></h3></div>
+      <div><p id="declare-text"></p></div>
+      </div>
+    </div>
+    </section>
+     <script>
+    function formm(){
+    var res,na,em,ph,qu,un,sk,ep,te,tw,cou;
+    var na=document.getElementById("name").value;
+    var em=document.getElementById("email").value;
+    var ph=parseInt(document.getElementById("phone").value);
+    var qu=document.getElementById("quali").value;
+    var un=document.getElementById("university").value;
+    var sk=document.getElementById("skills").value;
+    var ep=document.getElementById("experience").value;
+    var te=document.getElementById("tenth").value;
+    var tw=document.getElementById("twelth").value;
+    var cou=document.getElementById("course").value;
+
+    document.getElementById("res").innerHTML="Resume";
+    document.getElementById("pers").innerHTML="Personal Details<hr>";
+    document.getElementById("namee").innerHTML=" Name : "+na;
+    document.getElementById("emai").innerHTML=" Email : "+em;
+    document.getElementById("phonee").innerHTML=" Phone Number : "+ph+"<br>";
+    document.getElementById("stre").innerHTML="Strength<hr>";
+    document.getElementById("stre-pera").innerHTML=`<p><ul><li>Energetic, punctual, outgoing, hardworking & sincere</li><li>Open to feedback and improvement</li><li>Honest and open communication with team colleagues</li><li>Problem solving skill and belief in teamwork</li></ul></p><br>`;
+    document.getElementById("academics").innerHTML="Academics<hr>";
+    document.getElementById("academics-pera").innerHTML=`<ul><li> ${qu} , ${cou} from ${un} </li><li> 12th ${tw} </li><li> 10th ${te}</li></ul><br>`;
+    document.getElementById("technical-skills").innerHTML="Technical Skills<hr>";
+    document.getElementById("ski").innerHTML="Well versed with "+sk+"<br>";
+    document.getElementById("work-experience").innerHTML="Work Experience<hr>";
+    document.getElementById("exp").innerHTML=ep+" and would like to get some memorable experience from the reputed related companies<br>";
+    document.getElementById("career-objective").innerHTML="Career Objective<hr>";
+    document.getElementById("career-obj-text").innerHTML="To obtain position where I could effectively apply my skills and knowledge I have learned and to give an opportunity to work with productively and accurately in your reputed company.<br>";
+    document.getElementById("declaration").innerHTML="Declaration<hr>";
+    document.getElementById("declare-text").innerHTML="I hereby declare that all the details given above are true to the best of my knowledge.";
+    }
+    </script>
+     
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
